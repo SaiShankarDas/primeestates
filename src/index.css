@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-900 font-body;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .glass-effect {
+    @apply bg-white/10 backdrop-blur-md border border-white/20;
+  }
+  
+  .neumorphism {
+    @apply bg-slate-50 shadow-[8px_8px_16px_#d1d9e6,-8px_-8px_16px_#ffffff];
+  }
+  
+  .neumorphism-inset {
+    @apply bg-slate-50 shadow-[inset_8px_8px_16px_#d1d9e6,inset_-8px_-8px_16px_#ffffff];
+  }
+  
+  .gradient-text {
+    @apply bg-gradient-to-r from-royal via-emerald to-gold bg-clip-text text-transparent;
+  }
+  
+  .btn-primary {
+    @apply bg-gradient-to-r from-royal to-emerald text-white px-6 py-3 rounded-xl font-medium hover:shadow-lg hover:shadow-royal/25 transition-all duration-300 transform hover:scale-105;
+  }
+  
+  .btn-secondary {
+    @apply bg-white text-navy border border-slate-200 px-6 py-3 rounded-xl font-medium hover:bg-slate-50 hover:shadow-md transition-all duration-300;
+  }
+  
+  .property-card {
+    @apply bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-slate-100;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-slate-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-300 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-slate-400;
+}
